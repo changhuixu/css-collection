@@ -1,0 +1,65 @@
+section#ribbon1 {
+  display: flex;
+  margin: 1rem;
+}
+
+.badge {
+  max-width: 25rem;
+  min-width: 20rem;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  background: #ffffff;
+}
+
+.badge:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.badge .badge-header {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -0.5rem;
+  z-index: 1;
+  padding: 1rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  color: #ffcd00;
+  text-align: left;
+}
+
+.badge .badge-header:before,
+:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.badge .badge-header:before {
+  background: #ffcd00;
+  height: 100%;
+  width: 105%;
+  transform-origin: bottom right;
+  transform: rotate(1deg);
+}
+
+.badge .badge-header:after {
+  background: #000000;
+  transform: rotate(-3deg);
+  transform-origin: bottom left;
+  height: 100%;
+  width: 105%;
+}
+
+.badge-header-content {
+  position: relative;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.badge .badge-body {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}

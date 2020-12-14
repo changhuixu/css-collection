@@ -1,0 +1,54 @@
+section#letter {
+  display: flex;
+  margin: 1rem;
+  min-width: 20rem;
+  max-width: 40rem;
+}
+
+.letter-stripped {
+  position: relative;
+  padding: 1rem 2rem;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.letter-stripped:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.letter-stripped::after {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #3c7ab8 0,
+    #3c7ab8 20px,
+    #fff 0,
+    #fff 30px,
+    #cb2c4b 0,
+    #cb2c4b 40px
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  z-index: 0;
+}
+.letter-stripped::before {
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  content: '';
+  z-index: 1;
+  border-radius: 20px;
+}
+.letter-content {
+  position: relative;
+  z-index: 2;
+  font-family: 'Kavivanar', cursive;
+  font-size: 1.25rem;
+}

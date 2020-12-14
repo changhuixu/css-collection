@@ -1,0 +1,33 @@
+.color-div {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  color: #ffffff;
+}
+.bg-cool-gray {
+  background: #63666a;
+}
+.bg-blue {
+  background: #00558c;
+}
+.bg-green {
+  background: #00664f;
+}
+.bg-orange {
+  background: #bd472a;
+}
+.text-white {
+  color: #fff;
+}
+.bg-light-danger {
+  background: #fbeeeb;
+}
+.bg-light-success {
+  background: #ebfffa;
+}
+.bg-light-warning {
+  background: #fffae6;
+}
+.bg-light-info {
+  background: #f2faff;
+}

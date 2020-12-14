@@ -1,0 +1,53 @@
+section#ribbon2 {
+  display: flex;
+  margin: 1rem;
+}
+
+.offer-card {
+  background: #ffffff;
+  max-width: 25rem;
+  min-width: 20rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.offer-card:hover {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.offer-card-header {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  background-color: #ffcd00;
+}
+
+.offer-card-header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 0 0 1rem;
+}
+
+.offer-card-header-corner {
+  border-style: solid;
+  border-width: 0 6rem 4rem 0;
+  float: right;
+  height: 0px;
+  width: 0px;
+  border-color: transparent #000000 transparent transparent;
+  color: #ffcd00;
+}
+
+.offer-card-header-corner svg {
+  width: 2rem;
+  position: relative;
+  right: -3.5rem;
+  top: 0.5rem;
+}
+
+.offer-card-content {
+  padding: 0 20px 10px;
+  margin-top: 2rem;
+}

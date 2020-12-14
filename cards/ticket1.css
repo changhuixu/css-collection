@@ -1,0 +1,48 @@
+section#zigzag {
+  display: flex;
+  margin: 1rem;
+}
+
+.zigzag {
+  background-color: #ffffff;
+  max-width: 25rem;
+  min-width: 20rem;
+  position: relative; /* Anything but 'static' will work here. */
+}
+.zigzag:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100%;
+  background: linear-gradient(135deg, #ffffff 33.333%, transparent 0),
+    linear-gradient(-135deg, #ffffff 33.333%, transparent 0);
+  height: 0.5rem; /*desired tooth height*/
+  background-size: 1rem 100%; /*width (1st num) must be twice tooth height*/
+  background-position: center; /*optional: used for symmetrical edges*/
+}
+
+.shadow {
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 0.2rem 0.25rem);
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 0.2rem 0.25rem); /*optional*/
+  transition: 0.3s;
+}
+.shadow:hover {
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 0.25rem 0.5rem);
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 0.25rem 0.5rem); /*optional*/
+}
+.zigzag-content {
+  padding: 1rem;
+}
+
+.zigzag-content-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+hr {
+  border: 0; /* reset the default style sheet */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
