@@ -1,0 +1,63 @@
+section#drop-shadow-effect-colored {
+  display: flex;
+  margin: 1rem;
+}
+
+.colored {
+  display: flex;
+  max-width: 25rem;
+  min-width: 20rem;
+  min-height: 25rem;
+}
+.colored .shadow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ff4370;
+  color: #ffffff;
+  padding: 1rem;
+}
+.colored .shadow::before {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: 5%;
+  right: 5%;
+  bottom: -1rem;
+  height: 2.5rem;
+  background-color: #ff4370;
+  border-radius: 50%;
+  filter: blur(1rem);
+}
+.colored .shadow::after {
+  content: '';
+  position: absolute;
+  top: auto;
+  left: 5%;
+  right: 5%;
+  bottom: -1rem;
+  height: 2.5rem;
+  background-color: #ff4370;
+  border-radius: 50%;
+  filter: blur(2rem);
+}
+
+.colored .shadow .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+.colored .shadow hr {
+  width: inherit;
+  border: 0; /* reset the default style sheet */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #901a00;
+}
+.colored .shadow .content {
+  display: flex;
+  flex-direction: column;
+  color: #f3f3f3;
+}

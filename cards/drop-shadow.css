@@ -1,0 +1,61 @@
+section#drop-shadow-effect-curved {
+  display: flex;
+  margin: 1rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  max-width: 60rem;
+  min-width: 40rem;
+}
+
+.box.curved .shadow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  min-height: 20rem;
+}
+.box.curved .shadow::after {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: 2rem;
+  left: 2rem;
+  width: 70%;
+  height: 70%;
+  background-color: #000000;
+  transform-origin: right;
+  transform: skewY(-5deg);
+  filter: blur(1rem);
+  opacity: 0.6;
+  z-index: 1;
+}
+.box.curved .shadow::before {
+  content: '';
+  position: absolute;
+  top: auto;
+  bottom: 2rem;
+  right: 2rem;
+  width: 70%;
+  height: 70%;
+  background-color: #000000;
+  transform-origin: left;
+  transform: skewY(5deg);
+  filter: blur(1rem);
+  opacity: 0.6;
+  z-index: 1;
+}
+.box.curved .shadow div {
+  background-color: #ff4370;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 10px solid #ffffff;
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 2;
+}
