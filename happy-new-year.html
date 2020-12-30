@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy New Year 2021</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+        overflow: hidden;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: linear-gradient(135deg, #111111, #222222, #111111);
+      }
+      main::before {
+        content: '';
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+        border: 5vw solid #ff1062;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1vw #222222, 0 0 0 1.3vw #ffffff;
+      }
+      .floating-text {
+        font-weight: bolder;
+        font-size: 9vw;
+        color: #ffffff;
+        transform: skewY(-7deg);
+        text-shadow: 1px 1px 0 #cccccc, 2px 2px 0 #cccccc, 3px 3px 0 #cccccc,
+          4px 4px 0 #cccccc, 5px 5px 0 #cccccc, 10px 10px 0 rgba(0, 0, 0, 0.2);
+        animation: floating 5s ease-in-out infinite;
+      }
+      .floating-text.year {
+        font-size: 16vw;
+        text-shadow: 1px 1px 0 #cccccc, 2px 2px 0 #cccccc, 3px 3px 0 #cccccc,
+          4px 4px 0 #cccccc, 5px 5px 0 #cccccc, 6px 6px 0 #cccccc,
+          7px 7px 0 #cccccc, 8px 8px 0 #cccccc, 9px 9px 0 #cccccc,
+          20px 20px 0 rgba(0, 0, 0, 0.2);
+      }
+      @keyframes floating {
+        0%,
+        100% {
+          transform: skewY(-7deg) translate(0, -20px);
+        }
+        50% {
+          transform: skewY(-7deg) translate(0, 20px);
+        }
+      }
+
+      star {
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff,
+          0 0 80px #ffffff;
+        animation: glow linear infinite;
+      }
+      @keyframes glow {
+        0% {
+          opacity: 0.2;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="floating-text">Happy New Year</div>
+      <div class="floating-text year">2021</div>
+    </main>
+
+    <script>
+      (function () {
+        const n = 200;
+        const stars = document.querySelector('main');
+        let i = 0;
+        while (i < n) {
+          const star = document.createElement('star');
+          const x = Math.floor(Math.random() * window.innerWidth);
+          const y = Math.floor(Math.random() * window.innerHeight);
+
+          const size = Math.random() * 4;
+          star.style.left = x + 'px';
+          star.style.top = y + 'px';
+          star.style.width = 1 + size + 'px';
+          star.style.height = 1 + size + 'px';
+
+          const duration = Math.random() * 3;
+          star.style.animationDuration = 3 + duration + 's';
+          star.style.animationDelay = duration + 's';
+
+          stars.appendChild(star);
+          i++;
+        }
+      })();
+    </script>
+  </body>
+</html>
